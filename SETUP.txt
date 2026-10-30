@@ -1,0 +1,28 @@
+# Setup the Contribution Snake
+
+The README image URLs now point to the `output` branch of the profile repository:
+`Arun5916/Arun5916`.
+
+The animated SVG files do not exist until GitHub Actions generates and publishes them. Add the supplied workflow to your profile repository using the exact path:
+
+`.github/workflows/snake.yml`
+
+Steps:
+
+1. Open `https://github.com/Arun5916/Arun5916`.
+2. Add the `snake.yml` file at `.github/workflows/snake.yml` and commit it to the `main` branch.
+3. In the repository, open **Settings → Actions → General**.
+4. Under **Workflow permissions**, select **Read and write permissions**, then save.
+5. Open **Actions → Generate Contribution Snake → Run workflow**.
+6. Wait for the workflow to complete successfully. It will create/update the `output` branch and publish:
+   - `github-contribution-grid-snake.svg`
+   - `github-contribution-grid-snake-dark.svg`
+
+Verify the files by opening:
+
+- https://raw.githubusercontent.com/Arun5916/Arun5916/output/github-contribution-grid-snake.svg
+- https://raw.githubusercontent.com/Arun5916/Arun5916/output/github-contribution-grid-snake-dark.svg
+
+Once those URLs display SVG images, the snake section in README.md will load.
+
+If your repository's default branch is not `main`, update the `push.branches` value in `snake.yml` to match the actual default branch. You can still run the workflow manually with `workflow_dispatch`.
